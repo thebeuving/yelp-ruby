@@ -5,7 +5,7 @@ require 'yelp/responses/phone_search'
 module Yelp
   module Endpoint
     class PhoneSearch
-      PATH = '/v2/phone_search/'
+      PATH = '/v3/phone_search/'
 
       def initialize(client)
         @client = client
@@ -16,7 +16,7 @@ module Yelp
       # @param phone_number [String] the phone number
       # @return [Response::PhoneSearch] a parsed object of the response. For a complete
       #   sample response visit:
-      #   http://www.yelp.com/developers/documentation/v2/phone_search#sampleResponse
+      #   http://www.yelp.com/developers/documentation/v3/phone_search#sampleResponse
       #
       # @example Search for business with params and locale
       #   options = { code: 'US',
@@ -36,7 +36,7 @@ module Yelp
       private
 
       # Make a request to the business endpoint of the API
-      # The endpoint requires a format of /v2/business/{business-id}
+      # The endpoint requires a format of /v3/business/{business-id}
       # so the primary request parameter is concatenated. After getting
       # the response back it's checked to see if there are any API errors
       # and raises the relevant one if there is.
